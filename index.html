@@ -9,6 +9,7 @@
     <title>Whoami - Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -70,6 +71,79 @@
                 Ik heb een Dwergpapegaai. Op deze website
                 laat ik zien waar ik aan heb gewerkt en wat ik leer.
             </p>
+        </section>
+
+        <section aria-labelledby="contact-title" class="contact-section">
+
+            <h2 id="contact-title">Contact</h2>
+
+            <p>
+                Heb je een vraag of wil je contact met mij opnemen?
+                Vul dan het formulier in.
+            </p>
+
+            <form id="contact-form" novalidate>
+
+                <label for="name">Naam</label>
+                <input
+                id="name"
+                name="name"
+                required
+                minlength="2"
+                aria-describedby="name-error"
+                aria-invalid="false">
+
+                <span id="name-error" role="alert"></span>
+
+
+                <label for="email">E-mail</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    aria-describedby="email-error"
+                    aria-invalid="false">
+
+                <span id="email-error" role="alert"></span>
+
+
+                <label for="message">Bericht</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    required
+                    minlength="10"
+                    aria-describedby="message-error"
+                    aria-invalid="false"></textarea>
+
+                <span id="message-error" role="alert"></span>
+
+
+                <button type="submit">Versturen</button>
+
+                <div id="form-message" aria-live="polite"></div>
+
+            </form>
+
+        </section>
+
+        <section aria-labelledby="weather-title" class="weather-section">
+            <h2 id="weather-title">Actueel weer</h2>
+
+            <p>
+                 Met toestemming van je browser wordt het actuele weer
+                voor jouw locatie opgehaald.
+            </p>
+
+            <p
+                id="weather-status"
+                class="weather-status loading"
+                aria-live="polite">
+                Actuele weersgegevens worden geladen...
+            </p>
+
+            <div id="weather-content"></div>
         </section>
 
     </main>

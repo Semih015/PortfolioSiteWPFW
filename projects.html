@@ -9,6 +9,7 @@
     <title>Projecten - Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -42,7 +43,7 @@
     </header>
 
     <main id="main-content" class="container">
-        
+
         <section>
             <h2>Mijn projecten</h2>
 
@@ -50,57 +51,23 @@
                 Hieronder staat een overzicht van projecten waar ik
                 aan heb gewerkt. (zitten ook WIP projecten bij)
             </p>
+
+            <label for="project-filter">Filter projecten op categorie:</label>
+
+            <select id="project-filter">
+                <option value="all">Alle projecten</option>
+                <option value="Web">Web</option>
+                <option value="Software">Software</option>
+            </select>
         </section>
 
-        
-        <section class="project-list" aria-label="Projecten">
-
-             <article class="project-card">
-
-                <img src="images/project1.jpg" alt="Screenshot van mijn portfolio website">
-
-                <div class="project-content">
-
-                    <h3>Portfolio Website</h3>
-
-                    <p>
-                      Een persoonlijke portfolio website gemaakt met
-                      HTML en CSS. De website bevat informatie over
-                      mijzelf, mijn projecten en mijn blog.
-                    </p>
-
-                    <p>
-                     <strong>Technieken:</strong> HTML, CSS
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <article class="project-card">
-
-                <img src="images/project2.jpg" alt="Screenshot van het EscapeScrummy project">
-
-                <div class="project-content">
-
-                    <h3>EscapeScrummy</h3>
-
-                    <p>
-                        Een Escaperoom game waarbij je een Dungeon moest ontsnappen.
-                        Dit wordt gespeeld in een IDE, zoals IntelliJ. De Dungeon bevat
-                        puzzles, vragen en gevaarlijke monsters. 
-                    </p>
-
-                    <p>
-                        <strong>Technieken:</strong> Java
-                    </p>
-
-                </div>
-
-            </article>
-
+        <section
+            id="project-list"
+            class="project-list"
+            aria-label="Projecten"
+            aria-live="polite">
         </section>
+
     </main>
 
 </body>
